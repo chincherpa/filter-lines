@@ -17,8 +17,21 @@ that updates as you type.
    - **Aa** — case-sensitive matching
    - **.\*** — treat each term as a regular expression
    - **exclude** — invert: keep lines that do NOT match (like `grep -v`)
+   - **context** — cycle context lines around each match (like `grep -C`)
 5. Press `Enter` to keep the current result and close the input, or
    `Esc` to close it (the result tab stays open either way).
+
+### The result tab
+
+- Every line is prefixed with its **original line number**; matched terms
+  are **highlighted**.
+- **Ctrl+Click** (Go to Definition) on a result line jumps straight to
+  that line in the source file.
+- The header documents the query (terms, logic, options, match count,
+  timestamp), so old result tabs stay self-explanatory.
+- The **refresh button** in the tab's title bar re-runs the stored query
+  against the current content of the source file — handy for growing
+  log files.
 
 ## Development
 

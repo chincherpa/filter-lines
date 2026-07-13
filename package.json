@@ -17,8 +17,28 @@
       {
         "command": "filter.logs",
         "title": "Filter Lines: Filter Logs by Keywords"
+      },
+      {
+        "command": "filter.rerun",
+        "title": "Filter Lines: Re-run Filter on Current Source",
+        "icon": "$(refresh)"
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "filter.rerun",
+          "when": "resourceScheme == filter-lines",
+          "group": "navigation"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "filter.rerun",
+          "when": "resourceScheme == filter-lines"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
